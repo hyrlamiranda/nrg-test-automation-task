@@ -1,0 +1,93 @@
+Feature: All features tests
+
+As customer
+I expect to be able to easily manage personal details, such as delivery address, payment method, and password.
+
+@test
+Scenario: Login button should be available
+
+	Given I am on outfittery HomePage
+	When I go to LoginPage
+	Then I should see the login button to be available
+
+@test1
+Scenario: Login button is displayed
+
+	Given I am on outfittery HomePage
+    When I go to LoginPage
+    Then I should see the login button is displayed
+
+@test2
+Scenario: Username text field is displayed
+
+	Given I am on outfittery HomePage
+    When I go to LoginPage
+    Then I should see the username text field is displayed
+
+@test3
+Scenario: Password text field is displayed
+
+	Given I am on outfittery HomePage
+    When I go to LoginPage
+    Then I should see the password text field is displayed
+
+@test4
+Scenario: Success login test
+
+	Given I am on outfittery HomePage
+    When I go to LoginPage
+    Then I should see the dashboard of my profile
+
+@test5
+Scenario: Login failed message is displayed
+
+	Given I am on outfittery HomePage
+    When I go to LoginPage
+    Then I should see the message error about login or password incorrect
+
+@test6
+Scenario: Change phone number test
+
+	Given I am on outfittery HomePage
+    When I go to LoginPage
+    And I access the dashboard of my profile
+    And I click in menu on my settings
+    Then I should click on edit button
+    And I edit phone number
+    And I click in save changes
+
+@test7
+Scenario: Change name test
+
+	Given I am on outfittery HomePage
+    When I go to LoginPage
+    And I access the dashboard of my profile
+    And I click in menu on my settings
+    Then I should click on edit button
+    And I edit change name
+    And I click in save changes
+
+@test8
+Scenario: Change address test
+
+	Given I am on outfittery HomePage
+    When I go to LoginPage
+    And I access the dashboard of my profile
+    And I click in menu on my settings
+    Then I should click on manage addresses
+    And I edit the fields of addresses
+    And I click in save changes
+
+
+
+
+
+
+
+
+
+
+
+
+
+

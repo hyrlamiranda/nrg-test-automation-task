@@ -1,11 +1,10 @@
 package com.outfittery.base;
 
 import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
 
 public class BaseTest {
 
@@ -32,8 +31,10 @@ public class BaseTest {
 
     @Before
     public void setUp() {
+
         setSystemPathForDrivers();
         driver = new ChromeDriver();
+
         driver.get("http://www.outfittery.com");
     }
 
@@ -41,5 +42,4 @@ public class BaseTest {
     public void tearDown() {
         driver.quit();
     }
-
 }
